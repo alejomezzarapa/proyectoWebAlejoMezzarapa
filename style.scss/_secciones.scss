@@ -1,0 +1,147 @@
+/* PRODUCTOS */
+
+.productosDestacados{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4fr 4fr;
+    grid-column-gap: 2%;
+    grid-row-gap: 2%;
+    grid-template-areas: 
+    "destacado4 destacado2"
+    "destacado1 destacado3"
+    ;
+    img {
+        max-width: 100%;
+    }
+}
+
+.tituloProductosDestacados{
+    grid-area: titulo;
+}
+
+.productoDestacado1 {
+    grid-area: destacado1;
+}
+
+.productoDestacado2 {
+    grid-area: destacado2;
+}
+
+.productoDestacado3 {
+    grid-area: destacado3;
+}
+
+.productoDestacado4 {
+    grid-area: destacado4;
+    iframe{
+        max-width: 100%;
+        max-height: 60%;
+    }
+    
+}
+
+.sectionProductosNuevos {
+    background-color: black;
+    color: white;
+    h2 {
+        color: white;
+    }
+    p {
+        color: white;
+    }
+}
+
+.linkContacto a {
+        background-color: black;
+        color:yellow;
+    }
+
+.nuevosProductos{
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4fr 4fr;
+    grid-column-gap: 2%;
+    grid-row-gap: 2%;
+    grid-template-areas: 
+    "nuevo1 nuevo2"
+    "nuevo3 nuevo4"
+    ;
+    img {
+        max-width: 100%;
+    }
+}
+
+.nuevoProducto1 {
+    grid-area: nuevo1;
+}
+
+.nuevoProducto2 {
+    grid-area: nuevo2;
+}
+
+.nuevoProducto3 {
+    grid-area: nuevo3;
+}
+
+.nuevoProducto4 {
+    grid-area: nuevo4;
+}
+
+/* NOSOTROS */
+
+.banner p {
+    display: flex;
+    background-color:rgba(255, 255, 255, 0.5);
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+.publicaciones {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+    "articulo1" 
+    "articulo4" 
+    "articulo2"
+    "articulo3" 
+    "articulo6" 
+    "articulo5"
+    ;
+}
+
+.articulo1 {
+    grid-area: articulo1;
+}
+
+.articulo2 {
+    grid-area: articulo2;
+}
+
+.articulo3 {
+    grid-area: articulo3;
+}
+
+.articulo4 {
+    grid-area: articulo4;
+}
+
+.articulo5 {
+    grid-area: articulo5;
+}
+
+.articulo6 {
+    grid-area: articulo6;
+}
+
+/* CONTACTO */
+.formulario {
+    grid-area: formularioContacto;
+    background-color: black;
+    color: white;
+    p, h2 {
+        margin-bottom: 10px;
+        color: white;
+    }
+}

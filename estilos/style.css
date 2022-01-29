@@ -1,0 +1,658 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 15px;
+}
+
+
+/* HEADER */
+#logo {
+    text-decoration: none;
+    font-size: 140%;
+    font-family: black;
+}
+
+.logo p {
+    font-size: 80%;
+    text-align: left;
+}
+
+.header {
+    color: white;
+    background-color: black;
+    width: 100%;
+    padding: 0px 20px;
+    position: fixed;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.banner {
+    width: 100%;
+    height: 150px;
+    margin-top: 0px;
+    background-image: url(../imagenes/banner.jpeg);
+    background-position: center;
+}
+
+/* SECTIONS */
+
+section {
+    background-color: white;
+    padding-left: 1%;
+}
+
+section h2 {
+    color: rgb(32, 32, 32);
+    padding-top: 15px;
+}
+
+section p {
+    color: black;
+}
+
+/* SECTION COMPARTIDA NOTICIAS & FIGURAS */
+.sectionCompartida {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: 2fr;
+    grid-template-areas: 
+    "noticias" 
+    "figuras"
+    ;
+}
+
+.noticias {
+    grid-area: noticias;
+    background-color: rgb(245, 243, 243);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 8fr 1fr 20px;
+    grid-template-areas: 
+    "encabezadoNoticia"
+    "tituloNoticia"
+    "imagenNoticia"
+    "parrafoNoticia"
+    "linkNoticia"
+    ;
+}
+
+.noticias h2 {
+    grid-area: encabezadoNoticia;
+}
+
+.noticias h3 {
+    grid-area: tituloNoticia;
+}
+
+.noticias img {
+    width: 100%;
+    grid-area: imagenNoticia;
+}
+
+.noticias p {
+    grid-area: parrafoNoticia;
+}
+
+.noticias a {
+    grid-area: linkNoticia;
+    background-color: black;
+    text-align: center;
+}
+
+.figuras {
+    background-color: rgb(245, 243, 243);
+    grid-area: figuras;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: 4fr 12fr 12fr 20px;
+    grid-row-gap: 1%;
+    grid-template-areas: 
+    "titulo"
+    "video1"
+    "video2"
+    "link"
+    ;
+}
+
+.figuras h2 {
+    grid-area: titulo;
+}
+
+.videoFiguras1 {
+    grid-area: video1;
+    width: 100%;
+}
+
+.videoFiguras2 {
+    grid-area: video2;
+    width: 100%;
+}
+
+.figuras a {
+    grid-area: link;
+    background-color: black;
+    text-align: center;
+}
+
+/* SECTION MARCAS */
+.marcas {
+    margin-top: 15%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 8fr 20px 1fr;
+    grid-row-gap: 4%;
+    grid-template-areas: 
+    "tituloMarcas"
+    "sectionImagenes"
+    "linkMarcas"
+    "none"
+    ;
+}
+
+.marcas img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.imagenesMarcas {
+    grid-area: sectionImagenes;
+    display: grid;
+    grid-column-gap: 1%;
+    grid-row-gap: 1%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "vans element converse"
+    "activision xgames bones"
+    ;
+}
+
+#marcaVans {
+    grid-area: vans;
+}
+
+#marcaElement {
+    grid-area: element;
+}
+
+#marcaConverse {
+    grid-area: converse;
+}
+
+#marcaXgames {
+    grid-area: xgames;
+}
+
+#marcaActivision {
+    grid-area: activision;
+}
+
+#marcaBones {
+    grid-area: bones;
+}
+
+.marcas h3 {
+    grid-area: tituloMarcas;
+}
+
+.marcas a {
+    grid-area: linkMarcas;
+    background-color: black;
+    text-align: center;
+}
+
+/* ARTICLE */
+.nuestraHuella {
+    grid-area: nuestraHuella;
+    margin-top: 5%;
+    background-color: rgb(245, 243, 243);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 10fr 20px;
+    grid-row-gap: 2%;
+    grid-template-areas: 
+    "tituloNuestraHuella"
+    "articulosNuestraHuella"
+    "linkArticulo"
+    ;
+}
+
+.articulos {
+    grid-area: articulosNuestraHuella;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10fr 10fr;
+    grid-row-gap: 2%;
+    grid-template-areas: 
+    "articulo1"
+    "articulo2"
+    ;
+}
+
+.article1 {
+    grid-area: articulo1;
+}
+
+.article2 {
+    grid-area: articulo2;
+}
+
+.nuestraHuella h2 {
+    grid-area: tituloNuestraHuella;
+}
+
+.nuestraHuella a {
+    grid-area: linkArticulo;
+    background-color: black;
+    text-align: center;
+}
+
+.nuestraHuella article {
+    background-color: rgb(208, 236, 222);
+    border-radius: 15px;
+    justify-content: start;    
+}
+
+.imagenArticulo {
+    width: 100%;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: black;
+    color: white;
+    width: 100%;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.itemFooter {
+    display: block;
+    width: auto;
+    font-size: 12px;
+    padding-left: 1%;
+}
+
+.itemFooterFormulario {
+    display: flex;
+}
+
+.itemFooterFormulario label {
+    margin-right: 5px;
+}
+
+/* PRODUCTOS */
+
+.productosDestacados{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4fr 4fr;
+    grid-column-gap: 2%;
+    grid-row-gap: 2%;
+    grid-template-areas: 
+    "destacado4 destacado2"
+    "destacado1 destacado3"
+    ;
+}
+
+.tituloProductosDestacados{
+    grid-area: titulo;
+}
+
+.productoDestacado1 {
+    grid-area: destacado1;
+}
+
+.productoDestacado2 {
+    grid-area: destacado2;
+}
+
+.productoDestacado3 {
+    grid-area: destacado3;
+}
+
+.productoDestacado4 {
+    grid-area: destacado4;
+}
+
+.productoDestacado4 iframe{
+    max-width: 100%;
+    max-height: 60%;
+}
+
+.productosDestacados img {
+    max-width: 100%;
+}
+
+.sectionProductosNuevos {
+    background-color: black;
+    color: white;
+}
+
+.sectionProductosNuevos h2 {
+    color: white;
+}
+
+.sectionProductosNuevos p {
+    color: white;
+}
+
+.linkContacto a {
+        background-color: black;
+        color:yellow;
+    }
+
+.nuevosProductos{
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4fr 4fr;
+    grid-column-gap: 2%;
+    grid-row-gap: 2%;
+    grid-template-areas: 
+    "nuevo1 nuevo2"
+    "nuevo3 nuevo4"
+    ;
+}
+
+.nuevoProducto1 {
+    grid-area: nuevo1;
+}
+
+.nuevoProducto2 {
+    grid-area: nuevo2;
+}
+
+.nuevoProducto3 {
+    grid-area: nuevo3;
+}
+
+.nuevoProducto4 {
+    grid-area: nuevo4;
+}
+
+.nuevosProductos img {
+    max-width: 100%;
+}
+
+/* NOSOTROS */
+
+.banner p {
+    display: flex;
+    background-color:rgba(255, 255, 255, 0.5);
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+.publicaciones {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+    "articulo1" 
+    "articulo4" 
+    "articulo2"
+    "articulo3" 
+    "articulo6" 
+    "articulo5"
+    ;
+}
+
+.articulo1 {
+    grid-area: articulo1;
+}
+
+.articulo2 {
+    grid-area: articulo2;
+}
+
+.articulo3 {
+    grid-area: articulo3;
+}
+
+.articulo4 {
+    grid-area: articulo4;
+}
+
+.articulo5 {
+    grid-area: articulo5;
+}
+
+.articulo6 {
+    grid-area: articulo6;
+}
+
+/* CONTACTO */
+.formulario {
+    grid-area: formularioContacto;
+    background-color: black;
+    color: white;
+}
+
+.formulario p, .formulario h2 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* Tamaño Horizontal <620 px */
+
+@media only screen and (min-width:621px) {
+    /* INDEX */
+    .header {
+        display: flex;
+        width: 100%;
+    }
+
+    .menu {
+        text-align: right;
+        padding-left: 60%;
+        padding-top: 10px;
+    }
+
+    .sectionCompartida {
+        display: grid;
+        grid-template-columns: 2fr 4fr;
+        grid-row: 1fr;
+        grid-column-gap: 10%;
+        grid-template-areas: 
+        "noticias figuras"
+        ;
+    }
+
+    .noticias {
+        grid-area: noticias;
+        background-color: rgb(245, 243, 243);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 8fr 1fr 20px;
+        grid-template-areas: 
+        "encabezadoNoticia"
+        "tituloNoticia"
+        "imagenNoticia"
+        "parrafoNoticia"
+        "linkNoticia"
+        ;
+    }
+
+    /* ANIMACIONES EN NOTICIAS */
+
+    .noticias:hover {
+        position: absolute;
+        width: 50%;
+        transform:  translate(0, 10px);
+        transition: all 1.5s;
+    }
+
+    .figuras {
+        background-color: rgb(245, 243, 243);
+        grid-area: figuras;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row: 1fr 6fr 6fr 20px;
+        grid-template-areas: 
+        "titulo"
+        "video1"
+        "video2"
+        "link"
+        ;
+    }
+
+    .figuras {
+        padding:1% 0 0 1% ;
+    }
+
+    .marcas {
+        margin-top: 5%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 3fr 20px;
+        grid-row-gap: 4%;
+        grid-template-areas: 
+        "tituloMarcas"
+        "sectionImagenes"
+        "linkMarcas"
+        
+        ;
+    }
+
+    .imagenesMarcas {
+        grid-area: sectionImagenes;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "vans element converse activision xgames bones"
+        ;
+    }
+
+    .nuestraHuella{
+        display: grid;
+        margin-bottom: 5%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 10fr 20px;
+        grid-template-areas: 
+        "tituloNuestraHuella"
+        "articulosNuestraHuella"
+        "linkArticulo"
+        ;
+    }
+
+    .articulos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 2%;
+        grid-template-areas: 
+        "articulo1 articulo2"
+        ;
+    }
+
+    .articulos a {
+        grid-area: linkArticulo;
+        background-color: black;
+        text-align: center;
+        width: 100%;
+    }
+
+    footer {
+        display: flex;
+        background-color: black;
+        color: white;
+        width: 100%;
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+
+    footer ul {
+        display: flex;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    footer h3 {
+        width: 100%px;
+        margin-left: 10px;
+    }
+
+    .itemFooter {
+        width: auto;
+        font-size: 15px;
+        padding-left: 1%;
+    }
+    
+    .itemFooterFormulario label {
+        height: 20px;
+    }
+
+    .itemFooterFormulario {
+        height: 20px;
+        margin-top: 8px;
+    }
+
+    /* PRODUCTOS */
+    .productosDestacados{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 2fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 2%;
+        grid-template-areas: 
+        "destacado1 destacado2 destacado3 destacado4"
+        ;
+    }
+    
+    .nuevosProductos{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 2%;
+        grid-template-areas: 
+        "nuevo1 nuevo2 nuevo3 nuevo4"
+        ;
+    }
+
+    /* NOSOTROS */
+    .publicaciones {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 1%;
+        grid-template-areas: 
+        "articulo1 articulo4 articulo2"
+        "articulo3 articulo6 articulo5"
+        ;
+    }
+
+    /* CONTACTO */
+    .sectionCompartidaContacto {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-areas: 
+        "formularioContacto nuestraHuella"
+        ;
+    }
+
+    .formulario {
+        margin-top: 20%;
+    }
+
+}

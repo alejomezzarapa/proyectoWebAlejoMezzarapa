@@ -1,0 +1,207 @@
+/* SECTIONS */
+
+section {
+    background-color: white;
+    padding-left: 1%;
+    h2 {
+        color: rgb(32, 32, 32);
+        padding-top: 15px;
+    }
+    p {
+        color: black;
+    }
+}
+
+/* SECTION COMPARTIDA NOTICIAS & FIGURAS */
+.sectionCompartida {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: 2fr;
+    grid-template-areas: 
+    "noticias" 
+    "figuras"
+    ;
+}
+
+.noticias {
+    grid-area: noticias;
+    background-color: rgb(245, 243, 243);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 8fr 1fr 20px;
+    grid-template-areas: 
+    "encabezadoNoticia"
+    "tituloNoticia"
+    "imagenNoticia"
+    "parrafoNoticia"
+    "linkNoticia"
+    ;
+    h2 {
+        grid-area: encabezadoNoticia;
+    }
+    h3 {
+        grid-area: tituloNoticia;
+    }
+    img {
+        width: 100%;
+        grid-area: imagenNoticia;
+    }
+    p {
+        grid-area: parrafoNoticia;
+    }
+    a {
+        grid-area: linkNoticia;
+        background-color: black;
+        text-align: center;
+    }
+}
+
+.figuras {
+    background-color: rgb(245, 243, 243);
+    grid-area: figuras;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: 4fr 12fr 12fr 20px;
+    grid-row-gap: 1%;
+    grid-template-areas: 
+    "titulo"
+    "video1"
+    "video2"
+    "link"
+    ;
+    h2 {
+        grid-area: titulo;
+    }
+    a {
+        grid-area: link;
+        background-color: black;
+        text-align: center;
+    }
+}
+
+.videoFiguras1 {
+    grid-area: video1;
+    width: 100%;
+}
+
+.videoFiguras2 {
+    grid-area: video2;
+    width: 100%;
+}
+
+/* SECTION MARCAS */
+.marcas {
+    margin-top: 15%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 8fr 20px 1fr;
+    grid-row-gap: 4%;
+    grid-template-areas: 
+    "tituloMarcas"
+    "sectionImagenes"
+    "linkMarcas"
+    "none"
+    ;
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.imagenesMarcas {
+    grid-area: sectionImagenes;
+    display: grid;
+    grid-column-gap: 1%;
+    grid-row-gap: 1%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "vans element converse"
+    "activision xgames bones"
+    ;
+    h3 {
+        grid-area: tituloMarcas;
+    }
+    a {
+        grid-area: linkMarcas;
+        background-color: black;
+        text-align: center;
+    }
+}
+
+#marcaVans {
+    grid-area: vans;
+}
+
+#marcaElement {
+    grid-area: element;
+}
+
+#marcaConverse {
+    grid-area: converse;
+}
+
+#marcaXgames {
+    grid-area: xgames;
+}
+
+#marcaActivision {
+    grid-area: activision;
+}
+
+#marcaBones {
+    grid-area: bones;
+}
+
+/* ARTICLE */
+.nuestraHuella {
+    grid-area: nuestraHuella;
+    margin-top: 5%;
+    background-color: rgb(245, 243, 243);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 10fr 20px;
+    grid-row-gap: 2%;
+    grid-template-areas: 
+    "tituloNuestraHuella"
+    "articulosNuestraHuella"
+    "linkArticulo"
+    ;
+    h2 {
+        grid-area: tituloNuestraHuella;
+    }
+    a {
+        grid-area: linkArticulo;
+        background-color: black;
+        text-align: center;
+    }
+    article {
+        background-color: rgb(208, 236, 222);
+        border-radius: 15px;
+        justify-content: start;    
+    }
+}
+
+.articulos {
+    grid-area: articulosNuestraHuella;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10fr 10fr;
+    grid-row-gap: 2%;
+    grid-template-areas: 
+    "articulo1"
+    "articulo2"
+    ;
+}
+
+.article1 {
+    grid-area: articulo1;
+}
+
+.article2 {
+    grid-area: articulo2;
+}
+
+.imagenArticulo {
+    width: 100%;
+}

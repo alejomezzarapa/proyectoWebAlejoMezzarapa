@@ -1,0 +1,715 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+p {
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* HEADER */
+#logo {
+  text-decoration: none;
+  font-size: 140%;
+  font-family: black;
+}
+
+.logo p {
+  font-size: 80%;
+  text-align: left;
+}
+
+.header {
+  color: white;
+  background-color: black;
+  width: 100%;
+  padding: 0px 20px;
+  position: fixed;
+}
+
+.banner {
+  width: 100%;
+  height: 150px;
+  margin-top: 0px;
+  background-image: url(../imagenes/banner.jpeg);
+  background-position: center;
+}
+
+/* FOOTER */
+footer {
+  background-color: black;
+  color: white;
+  width: 100%;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+.itemFooter {
+  display: block;
+  width: auto;
+  font-size: 12px;
+  padding-left: 1%;
+}
+
+.itemFooterFormulario {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.itemFooterFormulario label {
+  margin-right: 5px;
+}
+
+/* SECTIONS */
+section {
+  background-color: white;
+  padding-left: 1%;
+}
+
+section h2 {
+  color: #202020;
+  padding-top: 15px;
+}
+
+section p {
+  color: black;
+}
+
+/* SECTION COMPARTIDA NOTICIAS & FIGURAS */
+.sectionCompartida {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-row: 2;
+  grid-row: 2fr;
+      grid-template-areas: "noticias"  "figuras";
+}
+
+.noticias {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: noticias;
+  background-color: #f5f3f3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr 8fr 1fr 20px;
+      grid-template-rows: 1fr 1fr 8fr 1fr 20px;
+      grid-template-areas: "encabezadoNoticia" "tituloNoticia" "imagenNoticia" "parrafoNoticia" "linkNoticia";
+}
+
+.noticias h2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: encabezadoNoticia;
+}
+
+.noticias h3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: tituloNoticia;
+}
+
+.noticias img {
+  width: 100%;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: imagenNoticia;
+}
+
+.noticias p {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: parrafoNoticia;
+}
+
+.noticias a {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: linkNoticia;
+  background-color: black;
+  text-align: center;
+}
+
+.figuras {
+  background-color: #f5f3f3;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: figuras;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-row: 4fr 12fr 12fr 20px;
+  grid-row-gap: 1%;
+      grid-template-areas: "titulo" "video1" "video2" "link";
+}
+
+.figuras h2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: titulo;
+}
+
+.figuras a {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: link;
+  background-color: black;
+  text-align: center;
+}
+
+.videoFiguras1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: video1;
+  width: 100%;
+}
+
+.videoFiguras2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: video2;
+  width: 100%;
+}
+
+/* SECTION MARCAS */
+.marcas {
+  margin-top: 15%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 8fr 20px 1fr;
+      grid-template-rows: 1fr 8fr 20px 1fr;
+  grid-row-gap: 4%;
+      grid-template-areas: "tituloMarcas" "sectionImagenes" "linkMarcas" "none";
+}
+
+.marcas img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.imagenesMarcas {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: sectionImagenes;
+  display: -ms-grid;
+  display: grid;
+  grid-column-gap: 1%;
+  grid-row-gap: 1%;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas: "vans element converse" "activision xgames bones";
+}
+
+.imagenesMarcas h3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: tituloMarcas;
+}
+
+.imagenesMarcas a {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: linkMarcas;
+  background-color: black;
+  text-align: center;
+}
+
+#marcaVans {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: vans;
+}
+
+#marcaElement {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: element;
+}
+
+#marcaConverse {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: converse;
+}
+
+#marcaXgames {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: xgames;
+}
+
+#marcaActivision {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: activision;
+}
+
+#marcaBones {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: bones;
+}
+
+/* ARTICLE */
+.nuestraHuella {
+  grid-area: nuestraHuella;
+  margin-top: 5%;
+  background-color: #f5f3f3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 10fr 20px;
+      grid-template-rows: 1fr 10fr 20px;
+  grid-row-gap: 2%;
+      grid-template-areas: "tituloNuestraHuella" "articulosNuestraHuella" "linkArticulo";
+}
+
+.nuestraHuella h2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: tituloNuestraHuella;
+}
+
+.nuestraHuella a {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: linkArticulo;
+  background-color: black;
+  text-align: center;
+}
+
+.nuestraHuella article {
+  background-color: #d0ecde;
+  border-radius: 15px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.articulos {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: articulosNuestraHuella;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 10fr 10fr;
+      grid-template-rows: 10fr 10fr;
+  grid-row-gap: 2%;
+      grid-template-areas: "articulo1" "articulo2";
+}
+
+.article1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: articulo1;
+}
+
+.article2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: articulo2;
+}
+
+.imagenArticulo {
+  width: 100%;
+}
+
+/* PRODUCTOS */
+.productosDestacados {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 4fr 4fr;
+      grid-template-rows: 4fr 4fr;
+  grid-column-gap: 2%;
+  grid-row-gap: 2%;
+      grid-template-areas: "destacado4 destacado2" "destacado1 destacado3";
+}
+
+.productosDestacados img {
+  max-width: 100%;
+}
+
+.tituloProductosDestacados {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: titulo;
+}
+
+.productoDestacado1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: destacado1;
+}
+
+.productoDestacado2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: destacado2;
+}
+
+.productoDestacado3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: destacado3;
+}
+
+.productoDestacado4 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: destacado4;
+}
+
+.productoDestacado4 iframe {
+  max-width: 100%;
+  max-height: 60%;
+}
+
+.sectionProductosNuevos {
+  background-color: black;
+  color: white;
+}
+
+.sectionProductosNuevos h2 {
+  color: white;
+}
+
+.sectionProductosNuevos p {
+  color: white;
+}
+
+.linkContacto a {
+  background-color: black;
+  color: yellow;
+}
+
+.nuevosProductos {
+  margin-bottom: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 4fr 4fr;
+      grid-template-rows: 4fr 4fr;
+  grid-column-gap: 2%;
+  grid-row-gap: 2%;
+      grid-template-areas: "nuevo1 nuevo2" "nuevo3 nuevo4";
+}
+
+.nuevosProductos img {
+  max-width: 100%;
+}
+
+.nuevoProducto1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: nuevo1;
+}
+
+.nuevoProducto2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: nuevo2;
+}
+
+.nuevoProducto3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: nuevo3;
+}
+
+.nuevoProducto4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: nuevo4;
+}
+
+/* NOSOTROS */
+.banner p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+.publicaciones {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (1fr)[6];
+      grid-template-rows: repeat(6, 1fr);
+      grid-template-areas: "articulo1"  "articulo4"  "articulo2" "articulo3"  "articulo6"  "articulo5";
+}
+
+.articulo1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: articulo1;
+}
+
+.articulo2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: articulo2;
+}
+
+.articulo3 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: articulo3;
+}
+
+.articulo4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: articulo4;
+}
+
+.articulo5 {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: articulo5;
+}
+
+.articulo6 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: articulo6;
+}
+
+/* CONTACTO */
+.formulario {
+  grid-area: formularioContacto;
+  background-color: black;
+  color: white;
+}
+
+.formulario p, .formulario h2 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+/* Tamaño Horizontal <620 px */
+@media only screen and (min-width: 621px) {
+  /* INDEX */
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  .menu {
+    text-align: right;
+    padding-left: 60%;
+    padding-top: 10px;
+  }
+  .sectionCompartida {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 4fr;
+        grid-template-columns: 2fr 4fr;
+    -ms-grid-row: 1;
+    grid-row: 1fr;
+    grid-column-gap: 10%;
+        grid-template-areas: "noticias figuras";
+  }
+  .noticias {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: noticias;
+    background-color: #f5f3f3;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 8fr 1fr 20px;
+        grid-template-rows: 1fr 1fr 8fr 1fr 20px;
+        grid-template-areas: "encabezadoNoticia" "tituloNoticia" "imagenNoticia" "parrafoNoticia" "linkNoticia";
+  }
+  /* ANIMACIONES EN NOTICIAS */
+  .noticias:hover {
+    position: absolute;
+    width: 50%;
+    -webkit-transform: translate(0, 10px);
+            transform: translate(0, 10px);
+    -webkit-transition: all 1.5s;
+    transition: all 1.5s;
+  }
+  .figuras {
+    background-color: #f5f3f3;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: figuras;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-row: 1fr 6fr 6fr 20px;
+        grid-template-areas: "titulo" "video1" "video2" "link";
+  }
+  .figuras {
+    padding: 1% 0 0 1%;
+  }
+  .marcas {
+    margin-top: 5%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 3fr 20px;
+        grid-template-rows: 1fr 3fr 20px;
+    grid-row-gap: 4%;
+        grid-template-areas: "tituloMarcas" "sectionImagenes" "linkMarcas";
+  }
+  .imagenesMarcas {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: sectionImagenes;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[6];
+        grid-template-columns: repeat(6, 1fr);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "vans element converse activision xgames bones";
+  }
+  .nuestraHuella {
+    display: -ms-grid;
+    display: grid;
+    margin-bottom: 5%;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 10fr 20px;
+        grid-template-rows: 1fr 10fr 20px;
+        grid-template-areas: "tituloNuestraHuella" "articulosNuestraHuella" "linkArticulo";
+  }
+  .articulos {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    grid-column-gap: 2%;
+        grid-template-areas: "articulo1 articulo2";
+  }
+  .articulos a {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: linkArticulo;
+    background-color: black;
+    text-align: center;
+    width: 100%;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: black;
+    color: white;
+    width: 100%;
+    margin-bottom: 0px;
+    margin-top: 10px;
+  }
+  footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+  }
+  footer h3 {
+    width: 100%px;
+    margin-left: 10px;
+  }
+  .itemFooter {
+    width: auto;
+    font-size: 15px;
+    padding-left: 1%;
+  }
+  .itemFooterFormulario label {
+    height: 20px;
+  }
+  .itemFooterFormulario {
+    height: 20px;
+    margin-top: 8px;
+  }
+  /* PRODUCTOS */
+  .productosDestacados {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 2fr;
+        grid-template-columns: 1fr 1fr 1fr 2fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    grid-column-gap: 2%;
+        grid-template-areas: "destacado1 destacado2 destacado3 destacado4";
+  }
+  .nuevosProductos {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    grid-column-gap: 2%;
+        grid-template-areas: "nuevo1 nuevo2 nuevo3 nuevo4";
+  }
+  /* NOSOTROS */
+  .publicaciones {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 1%;
+        grid-template-areas: "articulo1 articulo4 articulo2" "articulo3 articulo6 articulo5";
+  }
+  /* CONTACTO */
+  .sectionCompartidaContacto {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 4fr;
+        grid-template-columns: 1fr 4fr;
+        grid-template-areas: "formularioContacto nuestraHuella";
+  }
+  .formulario {
+    margin-top: 20%;
+  }
+}
+/*# sourceMappingURL=estilos.css.map */

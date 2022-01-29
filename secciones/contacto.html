@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/style.css">
+    <title>Skate World</title>
+</head>
+<body>
+    <!-- ENCABEZADO -->
+    <header class="header">
+        <div class="logo">
+            <a id="logo" href="../index.html">community mid 90's</a>
+            <p>follow your steps</p>
+        </div>
+
+        <!-- MENU DE SECCIONES -->
+
+        <nav class="menu">
+            <ul>
+
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>    
+                
+                <li>
+                    <a href="productos.html">Productos</a>            
+                </li>
+                
+                <li>
+                    <a href="nosotros.html">Nosotros</a>    
+                </li>
+
+                <li>
+                    <a href="contacto.html">Contacto</a>
+                </li>
+    
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- BANNER PRINCIPAL -->
+    <div class="banner">
+    </div>
+
+    <!-- SECTION COMPARTIDA -->
+    
+    <section class="sectionCompartidaContacto">
+
+        <!-- FORMULARIO -->
+        <section class="formulario"> 
+            <h2>Contactanos</h2>
+            <p>Completa el formulario y nos pondremos en contacto 
+            para realizar una compra, compartir tu contenido o ayudar 
+            a las ONG con una donación</p>
+            <form>
+                <label for="name">Ingrese su nombre</label>
+                <input type="text" name="name"/><br>
+                <label for="email">Ingrese su email</label>
+                <input type="text" placeholder="direccion@correo.com" name="email"/><br>
+                <!-- area de texto -->
+
+                <label for="comentario">Comentario: <br>
+                    <textarea></textarea>
+                </label><br>
+
+                <!-- desplegable -->
+                <div>Selecciona el motivo de tu contacto</div>
+                <select name="type">
+                    <option value="productos">Productos</option>
+                    <option value="compartir">Compartir</option>
+                    <option value="donar">Donar</option>
+                    <option value="other">Otros</option>
+                </select>
+
+                <!-- checkbox -->
+                <div>Acepto términos y condiciones </div>
+                <input type="checkbox" name="acepto"> <br>
+
+                <!-- botones -->
+                <input type="submit" value="Enviar formulario">
+                <input type="reset"  value="Limpiar formulario">
+
+            </form>
+        </section>
+    
+        <!-- ONG -->
+        <section class="nuestraHuella">
+            <h2>Ayudemos a dejar nuestra huella en el planeta</h2>
+            <div class="articulos">   
+                    
+                <article class="article1">
+                    <img class="imagenArticulo" src="../imagenes/huellaPlantArg.png" alt="plantarg">
+                    <p>Plantarg, un ecosistema de organizaciones de la sociedad civil, instituciones, empresas y personas, dedicadas a la preservacion y reforestación de bosques nativos para la mitigación del cambio climático. <br>
+                    Formamos parte de la última generación que puede prevenir daños irreparables a nuestro planeta</p>
+                </article>
+    
+                <article class="article2">
+                    <img class="imagenArticulo" src="../imagenes/huellaWwf.png" alt="World Wildlife Fund">
+                    <p>WWF se encuentran la conservación, investigación y recuperación ambiental. Así, siempre tienen en marchar muchos proyectos para preservar la diversidad biológica, prestando especial atención a las especies amenazadas, y propiciar el desarrollo y el consumo sostenible.</p>
+                </article>
+            </div>
+        </section>
+
+    </section>
+    <!-- FOOTER -->
+    <footer>
+        <h3>Nuestros Datos</h3>
+        <ul>
+            <li class="itemFooter">Phone: +54 11 2345 6789</li>
+            <li class="itemFooter">Mail: info@communitymid90s.com</li>
+            <li class="itemFooter">Address: calle falsa 123</li>
+        </ul>
+        <form class="itemFooterFormulario">
+            <label for="email">Suscribite </label>
+            <input type="text" placeholder="direccion@correo.com" name="email"/><br>
+            <input type="submit" value="Enviar">
+        </form>
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,202 @@
+
+/* Tamaño Horizontal <620 px */
+
+@media only screen and (min-width:621px) {
+    /* INDEX */
+    .header {
+        display: flex;
+        width: 100%;
+    }
+
+    .menu {
+        text-align: right;
+        padding-left: 60%;
+        padding-top: 10px;
+    }
+
+    .sectionCompartida {
+        display: grid;
+        grid-template-columns: 2fr 4fr;
+        grid-row: 1fr;
+        grid-column-gap: 10%;
+        grid-template-areas: 
+        "noticias figuras"
+        ;
+    }
+
+    .noticias {
+        grid-area: noticias;
+        background-color: rgb(245, 243, 243);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 8fr 1fr 20px;
+        grid-template-areas: 
+        "encabezadoNoticia"
+        "tituloNoticia"
+        "imagenNoticia"
+        "parrafoNoticia"
+        "linkNoticia"
+        ;
+    }
+
+    /* ANIMACIONES EN NOTICIAS */
+
+    .noticias:hover {
+        position: absolute;
+        width: 50%;
+        transform:  translate(0, 10px);
+        transition: all 1.5s;
+    }
+
+    .figuras {
+        background-color: rgb(245, 243, 243);
+        grid-area: figuras;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row: 1fr 6fr 6fr 20px;
+        grid-template-areas: 
+        "titulo"
+        "video1"
+        "video2"
+        "link"
+        ;
+    }
+
+    .figuras {
+        padding:1% 0 0 1% ;
+    }
+
+    .marcas {
+        margin-top: 5%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 3fr 20px;
+        grid-row-gap: 4%;
+        grid-template-areas: 
+        "tituloMarcas"
+        "sectionImagenes"
+        "linkMarcas" 
+        ;
+    }
+
+    .imagenesMarcas {
+        grid-area: sectionImagenes;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "vans element converse activision xgames bones"
+        ;
+    }
+
+    .nuestraHuella{
+        display: grid;
+        margin-bottom: 5%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 10fr 20px;
+        grid-template-areas: 
+        "tituloNuestraHuella"
+        "articulosNuestraHuella"
+        "linkArticulo"
+        ;
+    }
+
+    .articulos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 2%;
+        grid-template-areas: 
+        "articulo1 articulo2"
+        ;
+    }
+
+    .articulos a {
+        grid-area: linkArticulo;
+        background-color: black;
+        text-align: center;
+        width: 100%;
+    }
+
+    footer {
+        display: flex;
+        background-color: black;
+        color: white;
+        width: 100%;
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+
+    footer ul {
+        display: flex;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    footer h3 {
+        width: 100%px;
+        margin-left: 10px;
+    }
+
+    .itemFooter {
+        width: auto;
+        font-size: 15px;
+        padding-left: 1%;
+    }
+    
+    .itemFooterFormulario label {
+        height: 20px;
+    }
+
+    .itemFooterFormulario {
+        height: 20px;
+        margin-top: 8px;
+    }
+
+    /* PRODUCTOS */
+    .productosDestacados{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 2fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 2%;
+        grid-template-areas: 
+        "destacado1 destacado2 destacado3 destacado4"
+        ;
+    }
+    
+    .nuevosProductos{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 2%;
+        grid-template-areas: 
+        "nuevo1 nuevo2 nuevo3 nuevo4"
+        ;
+    }
+
+    /* NOSOTROS */
+    .publicaciones {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 1%;
+        grid-template-areas: 
+        "articulo1 articulo4 articulo2"
+        "articulo3 articulo6 articulo5"
+        ;
+    }
+
+    /* CONTACTO */
+    .sectionCompartidaContacto {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-areas: 
+        "formularioContacto nuestraHuella"
+        ;
+    }
+
+    .formulario {
+        margin-top: 20%;
+    }
+
+}
