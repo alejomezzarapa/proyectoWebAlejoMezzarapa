@@ -36,8 +36,6 @@ p {
     color: white;
     background-color: black;
     width: 100%;
-    padding: 0px 20px;
-    position: fixed;
 }
 
 a {
@@ -224,11 +222,9 @@ section p {
 .nuestraHuella {
     grid-area: nuestraHuella;
     margin-top: 5%;
-    background-color: rgb(245, 243, 243);
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 10fr 20px;
-    grid-row-gap: 2%;
+    grid-template-rows: 1fr auto 20px;
     grid-template-areas: 
     "tituloNuestraHuella"
     "articulosNuestraHuella"
@@ -240,8 +236,6 @@ section p {
     grid-area: articulosNuestraHuella;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 10fr 10fr;
-    grid-row-gap: 2%;
     grid-template-areas: 
     "articulo1"
     "articulo2"
@@ -264,16 +258,6 @@ section p {
     grid-area: linkArticulo;
     background-color: black;
     text-align: center;
-}
-
-.nuestraHuella article {
-    background-color: rgb(208, 236, 222);
-    border-radius: 15px;
-    justify-content: start;    
-}
-
-.imagenArticulo {
-    width: 100%;
 }
 
 /* FOOTER */
@@ -442,16 +426,33 @@ footer {
     grid-area: articulo6;
 }
 
+/* LUGARES */
+.lugares {
+    margin-top: 5px;
+}
+
 /* CONTACTO */
 .formulario {
     grid-area: formularioContacto;
     background-color: black;
     color: white;
+    padding-bottom: 0%;
 }
 
 .formulario p, .formulario h2 {
     margin-bottom: 10px;
     color: white;
+}
+
+.nuestraHuellaContacto {
+    grid-area: nuestraHuella;
+    margin-top: 5%;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: 
+    "tituloNuestraHuella"
+    "articulosNuestraHuella"
+    ;
 }
 
 /* Tamaño Horizontal <620 px */
@@ -463,10 +464,9 @@ footer {
         width: 100%;
     }
 
-    .menu {
+    .header nav {
         text-align: right;
-        padding-left: 60%;
-        padding-top: 10px;
+        margin-left: 40%;
     }
 
     .sectionCompartida {
@@ -549,7 +549,7 @@ footer {
         display: grid;
         margin-bottom: 5%;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 10fr 20px;
+        grid-template-rows: 1fr auto 20px;
         grid-template-areas: 
         "tituloNuestraHuella"
         "articulosNuestraHuella"
@@ -655,4 +655,13 @@ footer {
         margin-top: 20%;
     }
 
+    .nuestraHuellaContacto {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        grid-template-areas: 
+        "tituloNuestraHuella"
+        "articulosNuestraHuella"
+        ;
+    }
 }
