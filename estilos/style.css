@@ -33,8 +33,6 @@ p {
 }
 
 .header {
-    color: white;
-    background-color: black;
     width: 100%;
 }
 
@@ -55,7 +53,6 @@ a {
 
 section {
     background-color: white;
-    padding-left: 1%;
 }
 
 section h2 {
@@ -384,11 +381,12 @@ footer {
 .banner p {
     display: flex;
     background-color:rgba(255, 255, 255, 0.5);
-    padding-top: 50px;
+    padding-top: 55px;
     padding-bottom: 10px;
 }
 
 .publicaciones {
+    margin-top: 40px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
@@ -459,15 +457,6 @@ footer {
 
 @media only screen and (min-width:621px) {
     /* INDEX */
-    .header {
-        display: flex;
-        width: 100%;
-    }
-
-    .header nav {
-        text-align: right;
-        margin-left: 40%;
-    }
 
     .sectionCompartida {
         display: grid;
