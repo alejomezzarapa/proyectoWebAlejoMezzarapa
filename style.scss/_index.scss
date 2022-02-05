@@ -2,7 +2,6 @@
 
 section {
     background-color: white;
-    padding-left: 1%;
     h2 {
         color: rgb(32, 32, 32);
         padding-top: 15px;
@@ -28,11 +27,13 @@ section {
     background-color: rgb(245, 243, 243);
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 8fr 1fr 20px;
+    grid-template-rows: 50px 70px 1fr 1fr 1fr 100px 20px;
     grid-template-areas: 
     "encabezadoNoticia"
     "tituloNoticia"
-    "imagenNoticia"
+    "imagenNoticia1"
+    "imagenNoticia2"
+    "imagenNoticia3"
     "parrafoNoticia"
     "linkNoticia"
     ;
@@ -42,9 +43,17 @@ section {
     h3 {
         grid-area: tituloNoticia;
     }
-    img {
+    .imagenNoticia1 {
         width: 100%;
-        grid-area: imagenNoticia;
+        grid-area: imagenNoticia1;
+    }
+    .imagenNoticia2 {
+        width: 100%;
+        grid-area: imagenNoticia2;
+    }
+    .imagenNoticia3 {
+        width: 100%;
+        grid-area: imagenNoticia3;
     }
     p {
         grid-area: parrafoNoticia;
@@ -106,6 +115,14 @@ section {
         max-width: 100%;
         max-height: 100%;
     }
+    h3 {
+        grid-area: tituloMarcas;
+    }
+    a {
+        grid-area: linkMarcas;
+        background-color: black;
+        text-align: center;
+    }
 }
 
 .imagenesMarcas {
@@ -119,14 +136,6 @@ section {
     "vans element converse"
     "activision xgames bones"
     ;
-    h3 {
-        grid-area: tituloMarcas;
-    }
-    a {
-        grid-area: linkMarcas;
-        background-color: black;
-        text-align: center;
-    }
 }
 
 #marcaVans {
@@ -160,8 +169,7 @@ section {
     background-color: rgb(245, 243, 243);
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 10fr 20px;
-    grid-row-gap: 2%;
+    grid-template-rows: 1fr auto 20px;
     grid-template-areas: 
     "tituloNuestraHuella"
     "articulosNuestraHuella"
@@ -175,19 +183,13 @@ section {
         background-color: black;
         text-align: center;
     }
-    article {
-        background-color: rgb(208, 236, 222);
-        border-radius: 15px;
-        justify-content: start;    
-    }
 }
 
 .articulos {
     grid-area: articulosNuestraHuella;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 10fr 10fr;
-    grid-row-gap: 2%;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: 
     "articulo1"
     "articulo2"
@@ -196,12 +198,11 @@ section {
 
 .article1 {
     grid-area: articulo1;
+    height: auto;
 }
 
 .article2 {
     grid-area: articulo2;
+    height: auto;
 }
 
-.imagenArticulo {
-    width: 100%;
-}

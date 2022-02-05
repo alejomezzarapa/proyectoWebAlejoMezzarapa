@@ -82,7 +82,6 @@ footer {
 /* SECTIONS */
 section {
   background-color: white;
-  padding-left: 1%;
 }
 
 section h2 {
@@ -114,9 +113,9 @@ section p {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 1fr 1fr 8fr 1fr 20px;
-      grid-template-rows: 1fr 1fr 8fr 1fr 20px;
-      grid-template-areas: "encabezadoNoticia" "tituloNoticia" "imagenNoticia" "parrafoNoticia" "linkNoticia";
+  -ms-grid-rows: 50px 70px 1fr 1fr 1fr 100px 20px;
+      grid-template-rows: 50px 70px 1fr 1fr 1fr 100px 20px;
+      grid-template-areas: "encabezadoNoticia" "tituloNoticia" "imagenNoticia1" "imagenNoticia2" "imagenNoticia3" "parrafoNoticia" "linkNoticia";
 }
 
 .noticias h2 {
@@ -131,21 +130,35 @@ section p {
   grid-area: tituloNoticia;
 }
 
-.noticias img {
+.noticias .imagenNoticia1 {
   width: 100%;
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  grid-area: imagenNoticia;
+  grid-area: imagenNoticia1;
+}
+
+.noticias .imagenNoticia2 {
+  width: 100%;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: imagenNoticia2;
+}
+
+.noticias .imagenNoticia3 {
+  width: 100%;
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: imagenNoticia3;
 }
 
 .noticias p {
-  -ms-grid-row: 4;
+  -ms-grid-row: 6;
   -ms-grid-column: 1;
   grid-area: parrafoNoticia;
 }
 
 .noticias a {
-  -ms-grid-row: 5;
+  -ms-grid-row: 7;
   -ms-grid-column: 1;
   grid-area: linkNoticia;
   background-color: black;
@@ -212,6 +225,20 @@ section p {
   max-height: 100%;
 }
 
+.marcas h3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: tituloMarcas;
+}
+
+.marcas a {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: linkMarcas;
+  background-color: black;
+  text-align: center;
+}
+
 .imagenesMarcas {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -225,20 +252,6 @@ section p {
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
       grid-template-areas: "vans element converse" "activision xgames bones";
-}
-
-.imagenesMarcas h3 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: tituloMarcas;
-}
-
-.imagenesMarcas a {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: linkMarcas;
-  background-color: black;
-  text-align: center;
 }
 
 #marcaVans {
@@ -286,9 +299,8 @@ section p {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 1fr 10fr 20px;
-      grid-template-rows: 1fr 10fr 20px;
-  grid-row-gap: 2%;
+  -ms-grid-rows: 1fr auto 20px;
+      grid-template-rows: 1fr auto 20px;
       grid-template-areas: "tituloNuestraHuella" "articulosNuestraHuella" "linkArticulo";
 }
 
@@ -306,14 +318,6 @@ section p {
   text-align: center;
 }
 
-.nuestraHuella article {
-  background-color: #d0ecde;
-  border-radius: 15px;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-}
-
 .articulos {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -322,9 +326,8 @@ section p {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 10fr 10fr;
-      grid-template-rows: 10fr 10fr;
-  grid-row-gap: 2%;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
       grid-template-areas: "articulo1" "articulo2";
 }
 
@@ -332,16 +335,14 @@ section p {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: articulo1;
+  height: auto;
 }
 
 .article2 {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: articulo2;
-}
-
-.imagenArticulo {
-  width: 100%;
+  height: auto;
 }
 
 /* PRODUCTOS */
@@ -461,11 +462,12 @@ section p {
   display: -ms-flexbox;
   display: flex;
   background-color: rgba(255, 255, 255, 0.5);
-  padding-top: 50px;
+  padding-top: 60px;
   padding-bottom: 10px;
 }
 
 .publicaciones {
+  margin-top: 55px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -556,18 +558,9 @@ section p {
     display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr 1fr 8fr 1fr 20px;
-        grid-template-rows: 1fr 1fr 8fr 1fr 20px;
-        grid-template-areas: "encabezadoNoticia" "tituloNoticia" "imagenNoticia" "parrafoNoticia" "linkNoticia";
-  }
-  /* ANIMACIONES EN NOTICIAS */
-  .noticias:hover {
-    position: absolute;
-    width: 50%;
-    -webkit-transform: translate(0, 10px);
-            transform: translate(0, 10px);
-    -webkit-transition: all 1.5s;
-    transition: all 1.5s;
+    -ms-grid-rows: 50px 70px 3fr 3fr 3fr 100px 20px;
+        grid-template-rows: 50px 70px 3fr 3fr 3fr 100px 20px;
+        grid-template-areas: "encabezadoNoticia" "tituloNoticia" "imagenNoticia1" "imagenNoticia2" "imagenNoticia3" "parrafoNoticia" "linkNoticia";
   }
   .figuras {
     background-color: #f5f3f3;
@@ -578,7 +571,7 @@ section p {
     display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    grid-row: 1fr 6fr 6fr 20px;
+    grid-row: 10px 5fr 5fr 20px;
         grid-template-areas: "titulo" "video1" "video2" "link";
   }
   .figuras {
@@ -613,8 +606,8 @@ section p {
     margin-bottom: 5%;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr 10fr 20px;
-        grid-template-rows: 1fr 10fr 20px;
+    -ms-grid-rows: 1fr auto 20px;
+        grid-template-rows: 1fr auto 20px;
         grid-template-areas: "tituloNuestraHuella" "articulosNuestraHuella" "linkArticulo";
   }
   .articulos {

@@ -29,23 +29,16 @@
         background-color: rgb(245, 243, 243);
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 8fr 1fr 20px;
+        grid-template-rows: 50px 70px 3fr 3fr 3fr 100px 20px;
         grid-template-areas: 
         "encabezadoNoticia"
         "tituloNoticia"
-        "imagenNoticia"
+        "imagenNoticia1"
+        "imagenNoticia2"
+        "imagenNoticia3"
         "parrafoNoticia"
         "linkNoticia"
         ;
-    }
-
-    /* ANIMACIONES EN NOTICIAS */
-
-    .noticias:hover {
-        position: absolute;
-        width: 50%;
-        transform:  translate(0, 10px);
-        transition: all 1.5s;
     }
 
     .figuras {
@@ -53,7 +46,7 @@
         grid-area: figuras;
         display: grid;
         grid-template-columns: 1fr;
-        grid-row: 1fr 6fr 6fr 20px;
+        grid-row: 10px 5fr 5fr 20px;
         grid-template-areas: 
         "titulo"
         "video1"
@@ -93,7 +86,7 @@
         display: grid;
         margin-bottom: 5%;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 10fr 20px;
+        grid-template-rows: 1fr auto 20px;
         grid-template-areas: 
         "tituloNuestraHuella"
         "articulosNuestraHuella"
