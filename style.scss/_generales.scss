@@ -1,22 +1,25 @@
+@import "variables";
+
 *{
     padding: 0;
     margin: 0;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: $fuente-principal;
+    background-image: url(../imagenes/fondo.jpeg);
 }
 
 h2 {
-    font-size: 22px;
+    font-size: $font-size-h2;
 }
 
 h3 {
-    font-size: 18px;
+    font-size: $font-size-h3;
 }
 
 p {
-    font-size: 15px;
+    font-size: $font-size-p;
 }
 
 a {
@@ -25,16 +28,6 @@ a {
 }
 
 /* HEADER */
-#logo {
-    text-decoration: none;
-    font-size: 140%;
-    font-family: black;
-}
-
-.logo p {
-    font-size: 80%;
-    text-align: left;
-}
 
 .header {
     color: white;
@@ -46,7 +39,7 @@ a {
 
 .banner {
     width: 100%;
-    height: 150px;
+    height: 200px;
     margin-top: 0px;
     background-image: url(../imagenes/banner.jpeg);
     background-position: center;

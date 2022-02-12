@@ -1,7 +1,16 @@
+@mixin margin ($top, $bottom ) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+}
+
+@mixin padding ($left, $right) {
+    padding-left: $left;
+    padding-right: $right;
+}
 /* SECTIONS */
 
 section {
-    background-color: white;
+    background-color: rgba (255, 255, 255, 0.8 );
     h2 {
         color: rgb(32, 32, 32);
         padding-top: 15px;
@@ -13,6 +22,8 @@ section {
 
 /* SECTION COMPARTIDA NOTICIAS & FIGURAS */
 .sectionCompartida {
+    @include margin(20px,10px);
+    @include padding(2%,2%);
     display: grid;
     grid-template-columns: 1fr;
     grid-row: 2fr;
@@ -24,6 +35,8 @@ section {
 
 .noticias {
     grid-area: noticias;
+    @include margin(20px,10px);
+    @include padding(2%,2%);
     background-color: rgb(245, 243, 243);
     display: grid;
     grid-template-columns: 1fr;
@@ -66,7 +79,9 @@ section {
 }
 
 .figuras {
-    background-color: rgb(245, 243, 243);
+    @include margin(20px,10px);
+    @include padding(2%,2%);
+    background-color: rgba(192, 190, 190, 0.9);
     grid-area: figuras;
     display: grid;
     grid-template-columns: 1fr;
@@ -85,6 +100,7 @@ section {
         grid-area: link;
         background-color: black;
         text-align: center;
+        width: 100%;
     }
 }
 
@@ -100,8 +116,10 @@ section {
 
 /* SECTION MARCAS */
 .marcas {
-    margin-top: 15%;
+    @include margin(15%,5%);
+    @include padding(2%,2%);
     display: grid;
+    background-color: rgba(192, 190, 190, 0.9);
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 8fr 20px 1fr;
     grid-row-gap: 4%;
@@ -164,8 +182,8 @@ section {
 
 /* ARTICLE */
 .nuestraHuella {
+    @include margin(10%,5%);
     grid-area: nuestraHuella;
-    margin-top: 5%;
     background-color: rgb(245, 243, 243);
     display: grid;
     grid-template-columns: 1fr;
@@ -177,6 +195,7 @@ section {
     ;
     h2 {
         grid-area: tituloNuestraHuella;
+        margin-left: 2%;
     }
     a {
         grid-area: linkArticulo;
@@ -186,6 +205,7 @@ section {
 }
 
 .articulos {
+    padding-bottom: 2%;
     grid-area: articulosNuestraHuella;
     display: grid;
     grid-template-columns: 1fr;
