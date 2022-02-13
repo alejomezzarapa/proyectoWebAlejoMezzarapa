@@ -44,6 +44,18 @@
         "parrafoNoticia"
         "linkNoticia"
         ;
+        h2 {
+            font-size: 19px;
+        }
+        h3 {
+            font-size: 16px;
+        }
+    }
+
+    .noticias:hover {
+        position: flex;
+        transition: 0.8s;
+        transform: translate(50px,0) scale(1.2,1.2);
     }
 
     .figuras {
@@ -65,6 +77,12 @@
         padding:1% 1% 0 1% ;
     }
 
+    .figuras:hover {
+        position: flex;
+        transition: 0.8s;
+        transform: translate(-50px,0) scale(1.1,1.1);
+    }
+
     .marcas {
         padding: 0 2%;
         display: grid;
@@ -76,6 +94,12 @@
         "sectionImagenes"
         "linkMarcas" 
         ;
+    }
+
+    .marcas:hover { 
+            position: flex;
+            transition: 0.5s;
+            transform: translateY(-30px);
     }
 
     .imagenesMarcas {
@@ -162,6 +186,18 @@
         "destacado1 destacado2 destacado3 destacado4"
         ;
     }
+
+    .productosDestacados article:hover{
+        background-color: rgba($color: #747474, $alpha: 0.8);
+        transition: 0.8s;
+        transform: translate(0,10px) scale(1.1,1.1);
+    }
+
+    .productos:hover { 
+        position: flex;
+        transition: 0.5s;
+        transform: translateY(-30px);
+    }
     
     .nuevosProductos{
         display: grid;
@@ -173,6 +209,11 @@
         ;
     }
 
+    .nuevosProductos article:hover {
+        background-color: rgba($color: #303030, $alpha: 0.8);
+        transition: 0.8s;
+        transform: translate(0,10px) scale(1.1,1.1);
+    }
     /* NOSOTROS */
     .publicaciones {
         display: grid;
@@ -183,6 +224,11 @@
         "articulo1 articulo4 articulo2"
         "articulo3 articulo6 articulo5"
         ;
+    }
+
+    .publicaciones article:hover{
+        transition: 0.5s;
+        background-color: rgba($color: #747474, $alpha: 0.8);
     }
 
     /* CONTACTO */
@@ -199,4 +245,8 @@
         margin-top: 20%;
     }
 
+    .formulario:hover {
+        transition: 0.8s;
+        transform: translate(20px,10px) scale(1.1,1.1);
+    }
 }

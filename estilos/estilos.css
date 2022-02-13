@@ -67,9 +67,6 @@ footer {
 }
 
 /* SECTIONS */
-section {
-  background-color: rgba 255, 255, 255, 0.8;
-}
 section h2 {
   color: #202020;
   padding-top: 15px;
@@ -96,7 +93,7 @@ section p {
   margin-bottom: 10px;
   padding-left: 2%;
   padding-right: 2%;
-  background-color: #f5f3f3;
+  background-color: #c0bebe;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 50px 70px 1fr 1fr 1fr 100px 20px;
@@ -104,6 +101,7 @@ section p {
 }
 .noticias h2 {
   grid-area: encabezadoNoticia;
+  font-size: 20px;
 }
 .noticias h3 {
   grid-area: tituloNoticia;
@@ -134,7 +132,7 @@ section p {
   margin-bottom: 10px;
   padding-left: 2%;
   padding-right: 2%;
-  background-color: rgba(192, 190, 190, 0.9);
+  background-color: #c0bebe;
   grid-area: figuras;
   display: grid;
   grid-template-columns: 1fr;
@@ -222,12 +220,38 @@ section p {
   grid-area: bones;
 }
 
+.scale-up-bottom {
+  -webkit-animation: scale-up-bottom 0.9s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+          animation: scale-up-bottom 0.9s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes scale-up-bottom {
+  0% {
+    transform: scale(0.5);
+    transform-origin: 50% 100%;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: 50% 100%;
+  }
+}
+
+@keyframes scale-up-bottom {
+  0% {
+    transform: scale(0.5);
+    transform-origin: 50% 100%;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: 50% 100%;
+  }
+}
 /* ARTICLE */
 .nuestraHuella {
   margin-top: 10%;
   margin-bottom: 5%;
   grid-area: nuestraHuella;
-  background-color: #f5f3f3;
+  background-color: rgba(245, 243, 243, 0.8);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr auto 20px;
@@ -465,6 +489,18 @@ section p {
     grid-template-rows: 50px 70px 3fr 3fr 3fr 100px 20px;
     grid-template-areas: "encabezadoNoticia" "tituloNoticia" "imagenNoticia1" "imagenNoticia2" "imagenNoticia3" "parrafoNoticia" "linkNoticia";
   }
+  .noticias h2 {
+    font-size: 19px;
+  }
+  .noticias h3 {
+    font-size: 16px;
+  }
+
+  .noticias:hover {
+    position: flex;
+    transition: 0.8s;
+    transform: translate(50px, 0) scale(1.2, 1.2);
+  }
 
   .figuras {
     background-color: #f5f3f3;
@@ -480,6 +516,12 @@ section p {
     padding: 1% 1% 0 1%;
   }
 
+  .figuras:hover {
+    position: flex;
+    transition: 0.8s;
+    transform: translate(-50px, 0) scale(1.1, 1.1);
+  }
+
   .marcas {
     padding: 0 2%;
     display: grid;
@@ -487,6 +529,12 @@ section p {
     grid-template-rows: 1fr 3fr 20px;
     grid-row-gap: 4%;
     grid-template-areas: "tituloMarcas" "sectionImagenes" "linkMarcas";
+  }
+
+  .marcas:hover {
+    position: flex;
+    transition: 0.5s;
+    transform: translateY(-30px);
   }
 
   .imagenesMarcas {
@@ -564,12 +612,30 @@ section p {
     grid-template-areas: "destacado1 destacado2 destacado3 destacado4";
   }
 
+  .productosDestacados article:hover {
+    background-color: rgba(116, 116, 116, 0.8);
+    transition: 0.8s;
+    transform: translate(0, 10px) scale(1.1, 1.1);
+  }
+
+  .productos:hover, .productosNuevos:hover {
+    position: flex;
+    transition: 0.5s;
+    transform: translateY(-30px);
+  }
+
   .nuevosProductos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 2%;
     grid-template-areas: "nuevo1 nuevo2 nuevo3 nuevo4";
+  }
+
+  .nuevosProductos article:hover {
+    background-color: rgba(48, 48, 48, 0.8);
+    transition: 0.8s;
+    transform: translate(0, 10px) scale(1.1, 1.1);
   }
 
   /* NOSOTROS */
@@ -579,6 +645,11 @@ section p {
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 1%;
     grid-template-areas: "articulo1 articulo4 articulo2" "articulo3 articulo6 articulo5";
+  }
+
+  .publicaciones article:hover {
+    transition: 0.5s;
+    background-color: rgba(116, 116, 116, 0.8);
   }
 
   /* CONTACTO */
@@ -591,5 +662,10 @@ section p {
 
   .formulario {
     margin-top: 20%;
+  }
+
+  .formulario:hover {
+    transition: 0.8s;
+    transform: translate(20px, 10px) scale(1.1, 1.1);
   }
 }/*# sourceMappingURL=estilos.css.map */
