@@ -31,7 +31,6 @@
     .noticias {
         grid-area: noticias;
         padding: 0 2% 2% 2%;
-        background-color: rgb(245, 243, 243);
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 50px 70px 3fr 3fr 3fr 100px 20px;
@@ -55,11 +54,11 @@
     .noticias:hover {
         position: flex;
         transition: 0.8s;
-        transform: translate(50px,0) scale(1.2,1.2);
+        transform: translate(40px,0) scale(1.1,1.1);
     }
 
     .figuras {
-        background-color: rgb(245, 243, 243);
+        background-color: rgba(245, 243, 243,0.9);
         padding: 0 2% 5% 2%;
         grid-area: figuras;
         display: grid;
@@ -247,6 +246,6 @@
 
     .formulario:hover {
         transition: 0.8s;
-        transform: translate(20px,10px) scale(1.1,1.1);
+        transform: translate(10px,10px) scale(1.08,1.08);
     }
 }

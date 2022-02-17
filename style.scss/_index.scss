@@ -36,7 +36,7 @@ section {
     grid-area: noticias;
     @include margin(20px,10px);
     @include padding(2%,2%);
-    background-color: rgb(192, 190, 190);
+    background-color: rgba(223, 223, 223, 0.9);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 50px 70px 1fr 1fr 1fr 100px 20px;
