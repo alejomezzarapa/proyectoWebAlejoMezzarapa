@@ -19,6 +19,33 @@ section {
     }
 }
 
+/* INTRO */
+.intro {
+    @include margin(20px,10px);
+    display: flex;
+    background-image: url(../imagenes/fotoCommunity.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+    p {
+        background-color: rgba(223, 223, 223, 0.6);
+        margin-left: 8%;
+        width: 50%;
+        border-radius: 15px;
+    }
+    a {
+        color: black;
+        background-color: white;
+        border-radius: 10px;
+        font-size: 15px;
+        padding: 1px;
+    }
+}
+.textoIntro {
+    @include margin(20px,10px);
+}
+
 /* SECTION COMPARTIDA NOTICIAS & FIGURAS */
 .sectionCompartida {
     @include margin(20px,10px);
@@ -234,10 +261,16 @@ section {
 .article1 {
     grid-area: articulo1;
     height: auto;
+    img {
+        width: 100%;
+    }
 }
 
 .article2 {
     grid-area: articulo2;
     height: auto;
+    img {
+        width: 100%;
+    }
 }
 

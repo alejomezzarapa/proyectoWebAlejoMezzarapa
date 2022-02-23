@@ -53,18 +53,28 @@ footer {
     width: 100%;
     margin-bottom: 0px;
     margin-top: 10px;
+    padding-top: 10px;
+    h3 {
+        padding-left: 5%;
+    }
 }
 
 .itemFooter {
     display: block;
-    width: auto;
+    width: 250px;
     font-size: 12px;
-    padding-left: 1%;
 }
 
-.itemFooterFormulario {
-    display: flex;
-    label {
+.nuestrosDatos {
+    padding-left: 5%;
+}
+
+.iconos {
+    display: inline;
+    padding-left: 5%;
+    width: auto;
+    i {
         margin-right: 5px;
     }
+    
 }

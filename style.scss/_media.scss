@@ -147,32 +147,18 @@
         width: 100%;
         margin-bottom: 0px;
         margin-top: 10px;
+        h3 {
+            padding-left: 1%;
+        }
     }
 
-    footer ul {
+    .nuestrosDatos {
         display: flex;
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    footer h3 {
-        width: 100%px;
-        margin-left: 10px;
     }
 
     .itemFooter {
-        width: auto;
         font-size: 15px;
         padding-left: 1%;
-    }
-    
-    .itemFooterFormulario label {
-        height: 20px;
-    }
-
-    .itemFooterFormulario {
-        height: 20px;
-        margin-top: 8px;
     }
 
     /* PRODUCTOS */
