@@ -89,9 +89,12 @@ section p {
   margin-top: 20px;
   margin-bottom: 10px;
   display: flex;
-  background-image: url(../imagenes/fotoCommunity.jpeg);
-  background-position: center;
+  background: url(../imagenes/fotoCommunity.png);
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
   height: 300px;
   width: 100%;
 }
